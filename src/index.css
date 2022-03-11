@@ -1,13 +1,232 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --header-1: 64px;
+  --header-2: 48px;
+  --subtitle: 36px;
+  --body: 22px;
+  --c-primary: #cfdac3;
+  --c-accent: #e9e0cb;
+  --c-dark: #222222;
+  --c-light: #f6f6f6;
+  --c-grey: #dddddd;
+  --c-warning: #f09a18;
+  --header-font40px:40px;
+  --header-font20px:20px;
+  --header-font16px:16px;
+  --c-main:#192537;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+}
+::-webkit-scrollbar{
+  width: 0px;
+  background: transparent;
+}
+
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  background-color: var(--c-light);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: var(--header-1);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--header-2);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: var(--subtitle);
+  font-weight: 700;
+}
+
+p {
+  font-size: var(--body);
+  font-weight: 500;
+  text-align: justify;
+}
+
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  padding: 20px 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .hero-image {
+  width: 50%;
+}
+
+.hero .hero-image img {
+  width: 100%;
+}
+
+.hero .hero-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero .hero-text p {
+  margin: 8px 0;
+}
+
+.btn {
+  margin: 8px 0;
+  padding: 10px 20px;
+  width: fit-content;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn.btn-primary {
+  background-color: var(--c-primary);
+  color: var(--c-dark);
+}
+
+.btn.btn-outline {
+  background-color: var(--c-light);
+  color: var(--c-dark);
+  border: 2px solid var(--c-primary);
+}
+
+.about {
+  width: 100%;
+  padding: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about p {
+  margin: 8px 0;
+}
+
+.services {
+  width: 100%;
+  padding: 50px 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.services .service {
+  margin-bottom: 32px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.services .service.reverse {
+  flex-direction: row-reverse;
+}
+
+.services .service .service-img {
+  width: 40%;
+}
+
+.services .service .service-img img {
+  width: 100%;
+}
+
+.services .service .service-info {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.services .service .service-info p {
+  margin-top: 16px;
+}
+
+
+
+
+
+
+
+
+/* Tablet CSS */
+
+@media screen and (max-width: 768px) {
+  :root {
+     --header-1: 48px;
+     --header-2: 32px;
+     --subtitle: 28px;
+     --body: 18px;
+ }
+}
+
+/* Mobile CSS */
+
+@media screen and (max-width: 640px) {
+   :root {
+      --header-1: 48px;
+      --header-2: 32px;
+      --subtitle: 28px;
+      --body: 18px;
+  }
+  .hero {
+      flex-direction: column-reverse;
+      padding: 20px;
+  }
+  .hero .hero-text,
+  .hero .hero-image {
+      width: 100%;
+      margin: 16px 0;
+  }
+  .about,
+  .services,
+  .pricing,
+  .contact {
+      padding-right: 20px;
+      padding-left: 20px;
+  }
+  .services .service,
+  .services .service.reverse,
+  .pricing,
+  .contact {
+      flex-direction: column;
+  }
+  .services .service .service-img,
+  .services .service .service-info {
+      width: 100%;
+      margin: 8px 0;
+  }
+  .pricing  {
+     align-items: center;
+  }
+  .contact .contact-details,
+  .contact .contact-form {
+      margin-bottom: 16px;
+      width: 100%;
+  }
+  .contact .contact-form form input,
+  .contact .contact-form form textarea {
+      width: 100%;
+  }
 }

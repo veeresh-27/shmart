@@ -1,0 +1,87 @@
+.login-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--c-main);
+    height: 100vh;
+}
+.login{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--header-font40px);
+}
+.login-head{
+    max-width: 400px;
+    margin-bottom: 40px;
+}
+
+.login-head img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.login-body, .login-body form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-body form input{
+    width: 100%;
+    display: flex;
+    margin: 4px  0;
+    font-size: var(--header-font20px);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 8px;
+    
+}
+
+.login-body form button{
+    width: 40%;
+    display: flex;
+    margin: 4px  0;
+    font-size: var(--header-font20px);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 8px;
+    background-color: var(--c-warning);
+    color: var(--c-light);
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+    justify-content: center;
+    width: fit-content;
+}
+hr.login-hr{ 
+    margin: 16px 0;
+    border: 2px solid rgb(91, 91, 92);
+    border-radius: 5px;
+    width: 100%;
+  }
+.signup-btn{
+    width: 100%;
+    display: flex;
+    
+}
+.signup-btn p{
+    font-size: var(--header-font16px);
+    color: var(--c-light);
+    margin-right: 8px;
+}
+
+.signup-btn button{
+    background-color: transparent;
+    border: none;
+    color: var(--c-light);
+    font-size: var(--header-font16px);
+    text-decoration: underline;
+    cursor: pointer;
+}

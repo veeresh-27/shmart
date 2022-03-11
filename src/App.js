@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React ,{useState}from "react";
+import Item from "./components/Item/Item";
+import info from './components/info.json'
+import Navbar from "./components/Navbar/Navbar";
+import Pricing from "./components/Pricing/Pricing";
+
+
+import Pricingcards from "./components/Pricingcards/Pricingcards";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [showItem, setShowItem] = useState(false);
+    const [displayIndex, setDisplayIndex] = useState(0);
+    const onClickPriceCard = (newData) => {
+        
+        setShowItem(true);
+        setDisplayIndex(newData.index);
+    }
+    const onClickNavTitile = () => {
+        setShowItem(false);
+    }
+    
+    return <div className="app">
+        
+        <Navbar onClickNavTitile={onClickNavTitile}/>
+        {showItem?<><Item displayIndex={displayIndex}/></>:<Pricing onClickPriceCard={onClickPriceCard}/>}
+    </div>;
+
 }
 
 export default App;
