@@ -6,8 +6,10 @@ import { Avatar } from '@mui/material';
 import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import logo from '../../assets/logo1.png'
+import { useNavigate } from 'react-router-dom';
 
 function Navbar({onClickNavTitile}) {
+  let navigate = useNavigate();
   const [show, setShow] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
   const onClickBurger = () => {
@@ -29,7 +31,7 @@ function Navbar({onClickNavTitile}) {
   return (
     <div className={show?(showNavbar?"navbar open":"navbar"):(showNavbar?"unScrolledNavbar open":"unScrolledNavbar")}>
       <div className="navbarLeftItems">
-      <div className="navbarTitle" onClick={onClickNavTitile}>
+      <div className="navbarTitle" onClick={()=>navigate('/home')}>
         <img src={logo} alt='Logo'/>
       </div>
       <div className="search">
@@ -54,7 +56,7 @@ function Navbar({onClickNavTitile}) {
           </>
           <li>
             <div className="profileIcon" onClick={onClickBurger}>
-            <Avatar />
+            <Avatar className='avatar' />
             </div>
           
           </li>
@@ -68,8 +70,6 @@ function Navbar({onClickNavTitile}) {
       <div className="burger" onClick={onClickBurger}>
         <MenuRoundedIcon className='icon' fontSize="large"/>
       </div>
-      
-      
       
       </div>
     </div>

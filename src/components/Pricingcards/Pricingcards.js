@@ -1,10 +1,13 @@
 import React from 'react'
 import './Pricingcards.css'
+import { useState,useEffect } from 'react'
 // import { useState } from 'react'
 // import info from '../info.json'
 
 const Pricingcards = ({ title, preview, brand, price, id,onClick }) => {
     
+   
+
     return (<div className = 'card'
         id = { id } onClick={onClick} >
         <div className = 'card-image' >
