@@ -7,8 +7,18 @@ import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import logo from '../../assets/logo1.png'
 import { useNavigate } from 'react-router-dom';
+import {useUserAuth} from  '../../context/UserAuthContext'
 
 function Navbar({onClickNavTitile}) {
+  const {logOut} = useUserAuth();
+  const handleLogOut = async () => {
+    try{
+        await logOut();
+        navigate('/');
+    }catch(error){
+        alert(error.message)
+    }
+  }
   let navigate = useNavigate();
   const [show, setShow] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
@@ -55,7 +65,7 @@ function Navbar({onClickNavTitile}) {
           
           </>
           <li>
-            <div className="profileIcon" onClick={onClickBurger}>
+            <div className="profileIcon"  onClick={handleLogOut}>
             <Avatar className='avatar' />
             </div>
           

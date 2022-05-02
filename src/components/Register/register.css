@@ -1,4 +1,4 @@
-.login-container{
+.register-container{
     width: 100%;
     display: flex;
     align-items: center;
@@ -6,48 +6,44 @@
     background-color: var(--c-main);
     height: 100vh;
 }
-.login{
-    width: 30%;
+.register{
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top:10%;
-}
-.login-head{
-    max-width: 400px;
-    margin-bottom: 40px;
+    margin-top:5%;
 }
 
-.login-head img{
-    width: 100%;
-    object-fit: cover;
-}
 
-.login-body, .login-body form{
-    width: 400px;
+
+
+.register-body, .register-body form{
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.login-body form input{
+.register-body form input{
     width: 100%;
     display: flex;
     margin: 4px  0;
-    font-size: 24px;
+    font-size: 25px;
     border-radius: 10px;
     outline: none;
     border: none;
     padding: 16px;
-    
+    flex:0 1 1;
 }
 
-.login-body form button{
+
+
+.register-body form button{
     width: 100%;
     display: flex;
     margin: 4px  0;
-    font-size: 24px;
+    font-size: 20px;
     border-radius: 10px;
     outline: none;
     border: none;
@@ -59,15 +55,40 @@
     align-self: flex-start;
     justify-content: center;
 }
-hr.login-hr{ 
+.register-body h2{
+    color: var(--c-light);
+    align-self: flex-start;
+    margin-bottom: 20px;
+}
+.register-body button{
+    width: 100%;
+    display: flex;
+    margin: 4px  0;
+    font-size: 18px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 16px;
+    background-color: var(--c-warning);
+    color: var(--c-light);
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+    justify-content: center;
+}
+
+hr.register-hr{ 
     margin: 16px 0;
     border: 2px solid rgb(91, 91, 92);
     border-radius: 5px;
     width: 100%;
   }
 .signup-btn{
+    margin-top: 12px;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     
 }
 .signup-btn p{
@@ -82,5 +103,13 @@ hr.login-hr{
     color: var(--c-light);
     font-size: 20px;
     font-weight: 700;
+    width: max-content;
     cursor: pointer;
 }
+
+@media screen and (max-width: 640px){
+    .register{
+        width: 100%;
+    }
+}
+

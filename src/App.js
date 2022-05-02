@@ -4,26 +4,29 @@ import info from './components/info.json'
 import Navbar from "./components/Navbar/Navbar";
 import Pricing from "./components/Pricing/Pricing";
 import  Login  from './components/Login/Login.js';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { UserAuthContextProvider } from "./context/UserAuthContext";
 
 
 import Pricingcards from "./components/Pricingcards/Pricingcards";
 import Register from "./components/Register/Login";
+import ProtectedRoute from "./components/ProtectedRoute";
+
 
 function App() {
-    
     
     return <div className="app">
         
         <BrowserRouter>
+        <UserAuthContextProvider>
             <Routes>
-                <Route path='/auth/login' element={<Login />} />
-                <Route path='/auth/registration' element={<Register />} />
-                <Route path='/home' element={<><Navbar/><Pricing /></> } />
-                <Route path='/item/:id' element={<><Navbar/><Item  /></> } />
+                <Route exact path='/' element={<Login />} />
+                <Route path='/registration' element={<Register />} />
+                <Route path='/home' element={<ProtectedRoute><Navbar/><Pricing /></ProtectedRoute> } />
+                <Route path='/item/:id' element={<ProtectedRoute><Navbar/><Item  /></ProtectedRoute> } />
 
             </Routes>
+            </UserAuthContextProvider>
         </BrowserRouter>
     </div>;
 
