@@ -103,6 +103,6 @@ hr.login-hr{
 }
 @media screen and (max-width: 640px){
     .login{
-        width: 100%;
+        width: 80%;
     }
 }

@@ -109,7 +109,7 @@ hr.register-hr{
 
 @media screen and (max-width: 640px){
     .register{
-        width: 100%;
+        width: 80%;
     }
 }
 
