@@ -60,7 +60,7 @@
     align-self: flex-start;
     margin-bottom: 20px;
 }
-.register-body button{
+.register-body .Button{
     width: 100%;
     display: flex;
     margin: 4px  0;
@@ -84,7 +84,7 @@ hr.register-hr{
     width: 100%;
   }
 .signup-btn{
-    margin-top: 12px;
+    margin-top: 8px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -94,7 +94,7 @@ hr.register-hr{
 .signup-btn p{
     font-size: 20px;
     color: var(--c-light);
-    margin-right: 8px;
+    
 }
 
 .signup-btn button{

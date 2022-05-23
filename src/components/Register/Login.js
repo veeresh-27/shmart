@@ -13,7 +13,14 @@ export default function Register() {
     const {signUp} = useUserAuth();
 
     let navigate =useNavigate();
-
+    const onClickSignInWithGoogle = async() =>{
+        try{
+            await signInWithGoogle();
+            navigate('/home');
+        }catch(error){
+            alert(error.message)
+        }
+    }
     const handleSubmit = async (e) => {
         e.preventDefault();
         try{
@@ -23,14 +30,13 @@ export default function Register() {
         catch(error){
             alert(error.message)
         }
-
     }
   return (
     <div className='register-container'>
         <div className="register">
             
             <div className="register-body">
-                <h2>Register In</h2>
+                <h2>Register</h2>
                 <form onSubmit={handleSubmit}>
                     <input type="email" placeholder='Email Id' onChange={(e)=>setEmail(e.target.value)} />
                     {/* <input type='name' placeholder='Full Name' onChange={(e)=>setName(e.target.value)}/> */}
@@ -38,7 +44,7 @@ export default function Register() {
                     <button type="submit">Signup</button>
                 </form>
                 <hr className='register-hr' />
-                <button  onClick={signInWithGoogle}>
+                <button className='Button' onClick={onClickSignInWithGoogle}>
   Sign in with Google
 </button>
                 <div className="signup-btn">
