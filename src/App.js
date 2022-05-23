@@ -24,7 +24,6 @@ function App() {
                 <Route path='/registration' element={<Register />} />
                 <Route path='/home' element={<ProtectedRoute><Navbar/><Pricing /></ProtectedRoute> } />
                 <Route path='/item/:id' element={<ProtectedRoute><Navbar/><Item  /></ProtectedRoute> } />
-
             </Routes>
             </UserAuthContextProvider>
         </BrowserRouter>

@@ -1,11 +1,8 @@
 import React from 'react'
 import './Pricing.css'
-// import { useState } from 'react'
-import info from '../info.json'
 import Pricingcards from '../Pricingcards/Pricingcards'
 import {useNavigate} from 'react-router-dom'
 import useFetch  from '../../hooks/useFetch'
-// import Navbar from '../Navbar/Navbar'
 
 function Pricing() {
 
