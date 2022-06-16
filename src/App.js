@@ -11,6 +11,7 @@ import { UserAuthContextProvider } from "./context/UserAuthContext";
 import Pricingcards from "./components/Pricingcards/Pricingcards";
 import Register from "./components/Register/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
+import MyProfile from "./views/myProfile/myProfile";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
                 <Route path='/registration' element={<Register />} />
                 <Route path='/home' element={<ProtectedRoute><Navbar/><Pricing /></ProtectedRoute> } />
                 <Route path='/item/:id' element={<ProtectedRoute><Navbar/><Item  /></ProtectedRoute> } />
+                <Route path='my-profile' element={<><MyProfile/></>} />
             </Routes>
             </UserAuthContextProvider>
         </BrowserRouter>

@@ -1,0 +1,49 @@
+.myProfileContainer{
+    width: 100%;
+    margin-top: 12vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profilePicCard{
+    border: 2px solid #a5a5a5;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 8px;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+}
+
+.profilePicCard h3{
+    font-size: 24px;
+    font-weight: 500;
+    color:var(--c-dark);
+}
+
+.profilePicCard p{
+    font-size: 16px;
+    color:grey;
+}
+
+.profilePicCard .avatar{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    font-size: 100px;
+
+}
+
+.logoutBtn button{
+    border:none;
+    background-color: rgb(216, 121, 121);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+}

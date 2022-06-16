@@ -12,12 +12,13 @@ import {useUserAuth} from  '../../context/UserAuthContext'
 function Navbar({onClickNavTitile}) {
   const {logOut} = useUserAuth();
   const handleLogOut = async () => {
-    try{
-        await logOut();
-        navigate('/');
-    }catch(error){
-        alert(error.message)
-    }
+    // try{
+    //     await logOut();
+    //     navigate('/');
+    // }catch(error){
+    //     alert(error.message)
+    // }
+    navigate('/my-profile')
   }
   let navigate = useNavigate();
   const [show, setShow] = useState(false);
